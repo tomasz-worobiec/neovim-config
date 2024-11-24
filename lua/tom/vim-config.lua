@@ -20,3 +20,7 @@ opt.signcolumn      = 'yes'
 vim.keymap.set('', '<space>', '<Nop>', { noremap = true, silent = true })
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+
+-- Disable netrw file manager
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
