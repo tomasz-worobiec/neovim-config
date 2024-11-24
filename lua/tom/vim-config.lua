@@ -15,3 +15,8 @@ opt.shiftwidth      = 4
 opt.tabstop         = 4
 opt.swapfile        = false
 opt.signcolumn      = 'yes'
+
+-- Map space as leader
+vim.keymap.set('', '<space>', '<Nop>', { noremap = true, silent = true })
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
