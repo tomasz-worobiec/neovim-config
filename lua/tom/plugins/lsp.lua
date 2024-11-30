@@ -8,6 +8,27 @@ return {
         lsp.clangd.setup {
             cmd = { os.getenv('NVIM_LSP_CLANGD_CMD') or 'clangd' },
         }
+
+        -- C#
+        local omnisharp_extended = require('omnisharp_extended')
+        lsp.omnisharp.setup {
+            cmd = {
+                os.getenv('NVIM_LSP_OMNISHARP_CMD') or 'OmniSharp',
+                '-z',
+                '--hostPID', tostring(vim.fn.getpid()),
+                'DotNet:enablePackageRestore=false',
+                '--encoding', 'utf-8',
+                '--languageserver'
+            },
+            handlers = {
+                ['textDocument/definition'] = omnisharp_extended.definition_handler,
+                ['textDocument/typeDefinition'] = omnisharp_extended.type_definition_handler,
+                ['textDocument/references'] = omnisharp_extended.references_handler,
+                ['textDocument/implementation'] = omnisharp_extended.implementation_handler
+            },
+            enable_import_completion = true,
+            enable_roslyn_analyzers = true
+        }
     end,
     keys = {
         {
@@ -59,5 +80,8 @@ return {
             end,
             desc = 'Show signature (LSP)'
         },
+    },
+    dependencies = {
+            'Hoffs/omnisharp-extended-lsp.nvim',
     },
 }
