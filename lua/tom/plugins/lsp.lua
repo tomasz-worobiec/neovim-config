@@ -30,6 +30,11 @@ return {
             enable_roslyn_analyzers = true
         }
 
+        -- Nix
+        lsp.nil_ls.setup {
+            cmd = { os.getenv('NVIM_LSP_NIL_LS_CMD') or 'nil' },
+        }
+
         -- Rust
         lsp.rust_analyzer.setup {
             cmd = { os.getenv('NVIM_LSP_RUST_ANALYZER_CMD') or 'rust-analyzer' },
