@@ -1,6 +1,14 @@
 return {
     'neovim/nvim-lspconfig',
     lazy = false,
+    config = function()
+        local lsp = require('lspconfig')
+
+        -- C
+        lsp.clangd.setup {
+            cmd = { os.getenv('NVIM_LSP_CLANGD_CMD') or 'clangd' },
+        }
+    end,
     keys = {
         {
             'gd',
