@@ -29,6 +29,11 @@ return {
             enable_import_completion = true,
             enable_roslyn_analyzers = true
         }
+
+        -- Rust
+        lsp.rust_analyzer.setup {
+            cmd = { os.getenv('NVIM_LSP_RUST_ANALYZER_CMD') or 'rust-analyzer' },
+        }
     end,
     keys = {
         {
