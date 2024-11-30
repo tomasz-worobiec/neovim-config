@@ -45,6 +45,14 @@ return {
             cmd = { os.getenv('NVIM_LSP_NIL_LS_CMD') or 'nil' },
         }
 
+        -- Python
+        lsp.pyright.setup {
+            cmd = {
+                os.getenv('NVIM_LSP_PYRIGHT_CMD') or 'pyright-langserver',
+                '--stdio'
+            },
+        }
+
         -- Rust
         lsp.rust_analyzer.setup {
             cmd = { os.getenv('NVIM_LSP_RUST_ANALYZER_CMD') or 'rust-analyzer' },
