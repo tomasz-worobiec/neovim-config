@@ -30,6 +30,11 @@ return {
             enable_roslyn_analyzers = true
         }
 
+        -- Go
+        lsp.gopls.setup {
+            cmd = { os.getenv('NVIM_LSP_GOPLS_CMD') or 'gopls' },
+        }
+
         -- Lua
         lsp.lua_ls.setup {
             cmd = { os.getenv('NVIM_LSP_LUA_LS_CMD') or 'lua-language-server' },
