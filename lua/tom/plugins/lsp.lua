@@ -30,6 +30,11 @@ return {
             enable_roslyn_analyzers = true
         }
 
+        -- Lua
+        lsp.lua_ls.setup {
+            cmd = { os.getenv('NVIM_LSP_LUA_LS_CMD') or 'lua-language-server' },
+        }
+
         -- Nix
         lsp.nil_ls.setup {
             cmd = { os.getenv('NVIM_LSP_NIL_LS_CMD') or 'nil' },
