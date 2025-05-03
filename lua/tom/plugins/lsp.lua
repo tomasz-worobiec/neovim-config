@@ -35,6 +35,14 @@ return {
             cmd = { os.getenv('NVIM_LSP_GOPLS_CMD') or 'gopls' },
         }
 
+        -- javascript & typescript
+        lsp.ts_ls.setup {
+            cmd = {
+                os.getenv('NVIM_LSP_TYPESCRIPT_LS_CMD') or 'typescript-language-server',
+                '--stdio'
+            },
+        }
+
         -- Lua
         lsp.lua_ls.setup {
             cmd = { os.getenv('NVIM_LSP_LUA_LS_CMD') or 'lua-language-server' },
