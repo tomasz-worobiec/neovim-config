@@ -15,6 +15,7 @@ return {
                 'query',
                 'markdown',
                 'markdown_inline',
+                'javascript',
             }
         }
     end
