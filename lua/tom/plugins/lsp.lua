@@ -65,6 +65,13 @@ return {
         lsp.rust_analyzer.setup {
             cmd = { os.getenv('NVIM_LSP_RUST_ANALYZER_CMD') or 'rust-analyzer' },
         }
+
+        -- Vue.js
+        lsp.vuels.setup {
+            cmd = {
+                os.getenv('NVIM_LSP_VUE_LS_CMD') or 'vls'
+            },
+        }
     end,
     keys = {
         {
