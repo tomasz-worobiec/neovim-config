@@ -15,5 +15,6 @@ map('n', '<leader>h',   '<cmd>split<cr>',   'Create horizontal split')
 
 -- Buffer management
 map('n', '<leader>bq',  '<cmd>bd<cr>',      'Close buffer')
-map('n', '<leader[',    '<cmd>bp<cr>',      'Previous buffer')
+map('n', '<leader>[',    '<cmd>bp<cr>',      'Previous buffer')
+map('n', '<leader>]',    '<cmd>bn<cr>',      'Next buffer')
 map('n', '<leader]',    '<cmd>bn<cr>',      'Next buffer')
