@@ -1,5 +1,8 @@
 return {
     'junegunn/fzf.vim',
+    config = function ()
+        vim.env.FZF_DEFAULT_COMMAND = 'fd --type f --strip-cwd-prefix'
+    end,
     keys = {
         {
             '<leader>ff',
