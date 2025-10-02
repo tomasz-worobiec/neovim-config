@@ -53,22 +53,22 @@ return {
         {
             '<leader>dp',
             '<cmd>DapPause<cr>',
-            desc = 'Continue (DAP)'
+            desc = 'Pause (DAP)'
         },
         {
             '<leader>ds',
             '<cmd>DapStepInto<cr>',
-            desc = 'Continue (DAP)'
+            desc = 'Step into (DAP)'
         },
         {
             '<leader>do',
             '<cmd>DapStepOut<cr>',
-            desc = 'Continue (DAP)'
+            desc = 'Step out (DAP)'
         },
         {
             '<leader>dn',
             '<cmd>DapStepOver<cr>',
-            desc = 'Continue (DAP)'
+            desc = 'Step over (DAP)'
         },
     },
     dependencies = {
